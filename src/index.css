@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  background: #eee;
+}
+
+main {
+  margin-left: 5rem;
+  overflow-x: hidden;
+}
+
+/* helper */
+
+strong {
+  color: blue;
+}
+
+.jumbotron {
+  background: #413f3f;
+  color: #ccc;
+}
+
+/* navigation */
+
+.navbar {
+  position: fixed;
+  background-color: #333;
+  transition: .3s ease;
+  font-size: 1.25rem;
+  z-index: 999;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: #888;
+}
+
+.nav-link:hover {
+  color: #ccc;
+}
+
+.link-text {
+  display: none;
+}
+
+.nav-link i {
+  min-width: 2rem;
+  margin: 1.5rem;
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+.logo i {
+  transform: rotate(0);
+  transition: .3s ease;
+  color: #000;
+}
+
+.navbar:hover .logo i {
+  transform: rotate(-180deg);
+}
+
+
+/* responsive nav */
+
+/* small screen */
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+    overflow: hidden;
+  }
+
+  .logo {
+    display: none;
+  }
+  
+  .navbar-nav {
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
+}
+
+/* lg screens */
+
+@media only screen and (min-width: 600px) {
+  .navbar {
+    width: 6rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .logo i {
+    color: orangered;
+  }
+  
+  .navbar:hover .link-text {
+    display: block;
+  }
+
+  .nav-item:last-child {
+    margin-top: auto;
+  }
+}
+
+/* end nav */
+
+.global-data {
+  margin-top: 25px;
+}
+
+.global-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.data-panel {
+  background: #333;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c7c7c7;
+  margin: .5em;
+  border-radius: 3px;
+}
+
+.data-panel #casesData {
+  color: #4b94e3;
+  font-weight: bold;
+}
+
+.data-panel #recData {
+  color: #38bb68;
+  font-weight: bold;
+}
+
+.data-panel #deathsData {
+  color: orangered;
+  font-weight: bold;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background: black;
+}
+
+/* headlines */
+
+.headlines {
+  margin-top: 25px;
+}
+
+.headlines a {
+  text-decoration: none;
+  color: #333;
+}
+
+.headlines a:hover {
+  text-decoration: underline;
+}
+
+.headlines .card {
+  border: none;
+  margin: 1em 0;
+  height: auto;
+}
+
+/* country */
+
+.country-data {
+  margin-top: 25px;
+  font-size: .95em;
+}
+
+.country-data span {
+  font-weight: bold;
+}
+
+.country-title {
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: .75em 0;
+}
+
+/* about */
+
+.about {
+  position: relative;
+  height: 100vh;
+  padding-top: 25px;
+}
+
+.api-source {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.api-source h1 {
+  font-size: 1em;
+}
