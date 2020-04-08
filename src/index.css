@@ -19,12 +19,13 @@ main {
 /* helper */
 
 strong {
-  color: blue;
+  color: red;
 }
 
 .jumbotron {
-  background: #413f3f;
-  color: #ccc;
+  text-align: center;
+  background: #eee;
+  color: #413f3f;
 }
 
 /* navigation */
@@ -152,6 +153,10 @@ strong {
   margin-top: 25px;
 }
 
+.resources {
+  margin-top: 25px;
+}
+
 .global-data {
   display: flex;
   flex-direction: column;
@@ -235,19 +240,34 @@ strong {
   padding-top: 25px;
 }
 
-.api-source {
+.credits {
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 250px;
-  width: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex-direction: column;
+  background: rgb(225, 225, 225);
+  padding: 1.5em;
+  border-radius: 3px;
+  box-shadow: 1px 3px 7px #ccc;
+  text-decoration: none;
 }
 
-.api-source h1 {
+.credits h1 a {
+  color: #777;
+}
+
+.credits div {
+  margin: 1em;
+  height: 1px;
+  width: 200px;
+  background: #333;
+}
+
+.credits h1 {
   font-size: 1em;
 }
