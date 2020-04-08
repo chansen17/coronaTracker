@@ -94,14 +94,22 @@ strong {
 
 /* responsive nav */
 
+/* extra small screen */
+@media only screen and (max-width: 420px) {
+  .nav-link i {
+    min-width: 1rem;
+  }
+}
+
 /* small screen */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 590px) {
   .navbar {
     bottom: 0;
     width: 100vw;
     height: 5rem;
     overflow: hidden;
+    justify-content: center;
   }
 
   .logo {
@@ -151,6 +159,7 @@ strong {
 
 .global-data {
   margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .resources {

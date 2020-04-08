@@ -16,7 +16,7 @@ const Country = ( { countryData }) => {
                                 <li className="list-group-item">cases - {country.cases}</li>
                                 <li className="list-group-item">todays cases - {country.todayCases}</li>
                                 <li className="list-group-item">total deaths - {country.deaths}</li>
-                                <li className="list-group-item">todays deaths - {country.todaysDeaths}</li>                            
+                                <li className="list-group-item">todays deaths - {country.todayDeaths}</li>                            
                                 <li className="list-group-item">recovered - {country.recovered}</li>
                                 <li className="list-group-item">active - {country.active}</li>
                                 <li className="list-group-item">critical - {country.critical}</li>
