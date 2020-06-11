@@ -1,7 +1,8 @@
 import React, {useState, useEffect } from 'react';
 import axios from 'axios';
 
-const newsApiUrl = "https://newsapi.org/v2/top-headlines?country=us&apiKey=6a7e68e6fdb14bf0a20989a4bd63ef2d";
+const API_KEY = "6a7e68e6fdb14bf0a20989a4bd63ef2d";
+const newsApiUrl = `http://newsapi.org/v2/everything?q=covid&apiKey=${API_KEY}`;
 
 const Headlines = () => {
 const [state, setState] = useState({
@@ -21,7 +22,7 @@ const trending = () => {
 
     useEffect(() => {
         trending();
-    }, [])
+    }, []);
 
     return (
         <div className="headlines">
@@ -37,7 +38,7 @@ const trending = () => {
                                 <div className="card">
                                     <img src={article.urlToImage} alt={`${article.title}`} className="card-img-top"/>
                                     <div className="card-body">
-                                        <a target="_blank" href={article.url} rel="noopener noreferrer"><h6 className="card-title">{article.title}</h6></a>
+                                        <a href={article.url}><h6 className="card-title">{article.title}</h6></a>
                                         <hr/>
                                         <footer>
                                             <span className="badge badge-primary badge-pill">Author</span>
