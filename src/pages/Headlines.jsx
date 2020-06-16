@@ -2,7 +2,8 @@ import React, {useState, useEffect } from 'react';
 import axios from 'axios';
 
 const API_KEY = "6a7e68e6fdb14bf0a20989a4bd63ef2d";
-const newsApiUrl = `http://newsapi.org/v2/everything?q=covid&apiKey=${API_KEY}`;
+
+const newsApiUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
 
 const Headlines = () => {
 const [state, setState] = useState({
@@ -34,7 +35,7 @@ const trending = () => {
                 <div className="row">
                     {
                         state.trending.map(article => (
-                            <div key={article.title} className="col-md-4 col-lg-4">
+                            <div key={article.title} className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                                 <div className="card">
                                     <img src={article.urlToImage} alt={`${article.title}`} className="card-img-top"/>
                                     <div className="card-body">
